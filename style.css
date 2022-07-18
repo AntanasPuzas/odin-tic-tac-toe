@@ -20,6 +20,7 @@ body {
 .gameboard {
     display: grid;
     grid-template-columns: repeat(3, var(--square-size));
+    border: solid 1px white;
 }
 
 .square {
@@ -28,4 +29,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid 1px white;
 }
