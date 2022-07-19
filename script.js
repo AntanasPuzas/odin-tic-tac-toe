@@ -57,10 +57,15 @@ const Game = (() => {
         return false;
     }
 
+    const isDraw = (gameboard) => {
+        return gameboard.indexOf(null) === -1;
+    }
+
     return {
         getCurrentPlayer,
         toggleCurrentPlayer,
         findWinner,
+        isDraw,
     }
 })();
 
@@ -81,13 +86,19 @@ const Gameboard = (() => {
     }
 
     const _placeMarker = (square, index) => {
+        // Disable input in case of winner
         if (Game.findWinner(_gameboard)) {
             return;
-        } else if (square.textContent === "") {
+        }  else if (square.textContent === "") {
             square.textContent = Game.getCurrentPlayer().mark;
             _gameboard[index] = Game.getCurrentPlayer().mark;
+            // Handle winner
             if (Game.findWinner(_gameboard)) {
                 console.log("Winner: " + Game.getCurrentPlayer().name);
+                return;
+            // Handle draw
+            } else if (Game.isDraw(_gameboard)) {
+                console.log("draw");
                 return;
             }
             Game.toggleCurrentPlayer();
