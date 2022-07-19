@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 :root {
     --square-size: 50px;
 }
@@ -6,21 +8,69 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
 }
 
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
     color: white;
 }
 
+h1 {
+    margin-top: -100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form>div>input[type=text] {
+    width: 200px;
+    padding: 3px 4px;
+    border: solid 1px white;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+}
+
+form>button {
+    width: 100px;
+    padding: 5px;
+    margin-top: 15px;
+    border: none;
+    background-color: black;
+    border: solid 1px white;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+form>button:hover {
+    background: white;
+    color: black;
+    box-shadow: inset 0 0 0 2px black;
+}
+
 .gameboard {
     display: grid;
     grid-template-columns: repeat(3, var(--square-size));
     border: solid 1px white;
+    margin-top: 25px;
 }
 
 .square {
@@ -29,5 +79,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid 1px white;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+body>button {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px white;
+    background: black;
+    color: white;
+    margin-top: 25px;
+}
+
+body>button>svg {
+    width: 27px;
+}
+
+body>button:hover {
+    background: white;
+    color: black;
+    box-shadow: inset 0 0 0 2px black;
+}
+
+.winner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    position: absolute;
     border: solid 1px white;
 }
