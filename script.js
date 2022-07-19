@@ -140,7 +140,7 @@ document.querySelector("form>button").addEventListener("click", () => {
     }
 });
 
-document.querySelector("body>button").addEventListener("click", () => {
+document.querySelector("body>.container>button").addEventListener("click", () => {
     Gameboard.reset();
 })
 

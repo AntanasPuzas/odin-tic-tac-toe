@@ -12,29 +12,31 @@
 
 <body>
     <h1>TIC TAC TOE</h1>
-    <form action="" method="set">
-        <div>
-            <label for="player1-name">Player 1 Name:</label>
-            <input type="text" id="player1-name" name="player1-name">
+    <div class="container">
+        <form action="" method="set">
+            <div>
+                <label for="player1-name">Player 1 Name:</label>
+                <input type="text" id="player1-name" name="player1-name">
+            </div>
+            <div>
+                <label for="player2-name">Player 2 Name:</label>
+                <input type="text" id="player2-name" name="player2-name">
+            </div>
+            <button type="button">Submit</button>
+        </form>
+        <div class="gameboard"></div>
+        <div class="names">
+            <p id="name-1">Player 1: </p>
+            <p id="name-2">Player 2: </p>
         </div>
-        <div>
-            <label for="player2-name">Player 2 Name:</label>
-            <input type="text" id="player2-name" name="player2-name">
-        </div>
-        <button type="button">Submit</button>
-    </form>
-    <div class="gameboard"></div>
-    <div class="names">
-        <p id="name-1">Player 1: </p>
-        <p id="name-2">Player 2: </p>
+        <button type="button">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M6,5.75L10.25,10H7V16H13.5L15.5,18H7A2,2 0 0,1 5,16V10H1.75L6,5.75M18,18.25L13.75,14H17V8H10.5L8.5,6H17A2,2 0 0,1 19,8V14H22.25L18,18.25Z" />
+            </svg>
+        </button>
+        <div class="winner"></div>
     </div>
-    <button type="button">
-        <svg viewBox="0 0 24 24">
-            <path fill="currentColor"
-                d="M6,5.75L10.25,10H7V16H13.5L15.5,18H7A2,2 0 0,1 5,16V10H1.75L6,5.75M18,18.25L13.75,14H17V8H10.5L8.5,6H17A2,2 0 0,1 19,8V14H22.25L18,18.25Z" />
-        </svg>
-    </button>
-    <div class="winner"></div>
 </body>
 
 </html>
